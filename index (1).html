@@ -1,0 +1,114 @@
+<!Doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>travel.pro | Planificador</title>
+<link rel="stylesheet" href="src/styles/estilos.css" />
+    <meta name="theme-color" content="#111827" />
+    <meta name="color-scheme" content="light dark" />
+  </head>
+  <body>
+<div id="register-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="register-title">
+      <div class="modal-content">
+<h2 id="register-title">Comienza tu viaje</h2>
+        <p class="modal-subtitle">
+          Introduce tus datos para acceder a la plataforma.
+        </p>
+        <form id="register-form">
+          <div class="form-group">
+            <label for="reg-name">Nombre completo</label>
+            <input
+              type="text"
+              id="reg-name"
+              required
+              placeholder="Ej. Carlos Pérez"
+            />
+          </div>
+          <div class="form-group">
+            <label for="reg-email">Correo electrónico</label>
+            <input
+              type="email"
+              id="reg-email"
+              required
+              placeholder="carlos@example.com"
+            />
+          </div>
+          <div class="form-group">
+            <label for="reg-country">País de residencia</label>
+            <input
+              type="text"
+              id="reg-country"
+              required
+              placeholder="Colombia"
+            />
+          </div>
+          <button type="submit" class="btn btn-block">
+            Ingresar al sistema
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <nav class="navbar">
+      <div class="nav-logo">✈️ travel.pro</div>
+
+      <div id="welcome-message" class="welcome-text"></div>
+
+      <button id="theme-toggle" class="btn">🌙 Tema Oscuro</button>
+    </nav>
+
+    <main class="container">
+      <section class="search-container">
+        <h1 class="main-title">¿A dónde quieres ir hoy?</h1>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Busca un país en español o inglés (Ej: Corea, Japón, France)..."
+          />
+          <button id="search-btn" class="btn">Explorar</button>
+        </div>
+        <div id="error-message" class="error-box hidden"></div>
+      </section>
+
+      <div id="loader" class="loader-container hidden">
+        <div class="spinner"></div>
+        <p>Consultando bases de datos globales...</p>
+      </div>
+
+      <section id="results-wrapper" class="results-grid hidden">
+        <article class="card card-hero" id="mod-country"></article>
+
+        <article class="card" id="mod-weather"></article>
+
+        <article class="card" id="mod-currency"></article>
+
+        <article class="card card-fullwidth" id="mod-tourism"></article>
+
+        <article class="card" id="favorites">
+          <h2>Destinos favoritos</h2>
+        </article>
+        <article class="card" id="favorite-attractions">
+          <h2>Atracciones favoritas</h2>
+        </article>
+      </section>
+      <section id="dashboard" class="card card-fullwidth"></section>
+      <section id="history" class="card">
+        <h2>historial</h2>
+      </section>
+    </main>
+
+    <script src="src/script/strong.js"></script>
+    <script src="src/script/countries.js?v=3"></script>
+    <script src="src/script/weather.js"></script>
+    <script src="src/script/currency.js"></script>
+    <script src="src/script/tourism.js?v=3"></script>
+    <script src="src/script/app.js"></script>
+    <script src="src/script/Favoritos.js"></script>
+    <script src="src/script/Historial.js"></script>
+    <script src="src/script/dashboard.js"></script>
+    <script src="src/script/Atracciones.js"></script>
+
+  </body>
+</html>
